@@ -1,0 +1,37 @@
+---
+
+extends:
+  - airbnb
+  - "plugin:jest/recommended"
+  - "plugin:react/recommended"
+  - "plugin:lodash/recommended"
+  - "plugin:import/errors"
+  - "plugin:import/warnings"
+  - "plugin:jsx-a11y/recommended"
+
+parser: babel-eslint
+
+plugins:
+  - jsx-a11y
+  - jest
+  - babel
+  - lodash
+  - import
+  - react
+
+env:
+  browser: true
+  node: true
+  jest: true
+
+rules:
+  no-console: 0
+  lodash/import-scope:
+    - 2
+    - full
+  import/no-unresolved:
+    - 2
+    - ignore:
+      - gon
+  react/prop-types:
+    - 0

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Init state render 1`] = `
+<main
+  class="row"
+>
+  <aside
+    class="col-4"
+  >
+    <ul
+      class="list-group"
+    >
+      <li
+        class="d-flex align-items-center list-group-item active list-group-item-action"
+      >
+        general
+        <div
+          class="ml-auto btn-group btn-group-sm"
+          role="group"
+        >
+          <button
+            class="btn btn-success"
+            type="button"
+          >
+            Edit
+          </button>
+        </div>
+      </li>
+      <li
+        class="d-flex align-items-center list-group-item list-group-item-action"
+      >
+        random
+        <div
+          class="ml-auto btn-group btn-group-sm"
+          role="group"
+        >
+          <button
+            class="btn btn-success"
+            type="button"
+          >
+            Edit
+          </button>
+        </div>
+      </li>
+      <li
+        class="d-flex align-items-center list-group-item list-group-item-action"
+      >
+        my-channel
+        <div
+          class="ml-auto btn-group btn-group-sm"
+          role="group"
+        >
+          <button
+            class="btn btn-success"
+            type="button"
+          >
+            Edit
+          </button>
+          <button
+            class="btn btn-danger"
+            type="button"
+          >
+            Delete
+          </button>
+        </div>
+      </li>
+    </ul>
+  </aside>
+  <section
+    class="col"
+  />
+</main>
+`;
