@@ -1,0 +1,18 @@
+{
+  "buttons": {
+    "messageSending": "Send",
+    "messageSending_inProcess": "Sending...",
+    "channel": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "language": {
+      "english": "English",
+      "russian": "Russian"
+    }
+  },
+  "inputs": {
+    "newMessageText": "Enter new message's text:",
+    "languageChoice": "Choose language:"
+  }
+}

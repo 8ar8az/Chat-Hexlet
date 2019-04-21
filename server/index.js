@@ -29,6 +29,7 @@ export default () => {
   app.use(session(app));
   app.use(bodyParser());
   // app.use(serve(path.join(__dirname, '..', 'public')));
+  app.use(serve(path.resolve(__dirname, '..', 'assets')));
   if (isDevelopment) {
     koaWebpack({
       config: webpackConfig,

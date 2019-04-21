@@ -1,73 +1,2125 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Init state render 1`] = `
-<main
-  class="row"
->
-  <aside
-    class="col-4"
+exports[`Attemp to add a new message by the user 1`] = `
+<DocumentFragment>
+  <main
+    class="position-absolute row"
+    style="top: 0px; left: 0px; bottom: 0px; right: 0px;"
   >
-    <ul
-      class="list-group"
+    <aside
+      class="d-flex flex-column col-4"
     >
-      <li
-        class="d-flex align-items-center list-group-item active list-group-item-action"
+      <ul
+        class="channels-list list-group"
       >
-        general
+        <li
+          class="channel-item d-flex align-items-center list-group-item active list-group-item-action"
+        >
+          general
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          random
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          my-channel
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+            <button
+              class="button-channel-remove btn btn-danger"
+              type="button"
+            >
+              Delete
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="mt-auto mb-2 language-panel"
+      >
+        <h5
+          class="text-center language-panel-label"
+        >
+          Choose language:
+        </h5>
         <div
-          class="ml-auto btn-group btn-group-sm"
-          role="group"
+          class="d-flex justify-content-around"
         >
           <button
-            class="btn btn-success"
+            class="button-language-change-to-english btn btn-success"
             type="button"
           >
-            Edit
+            English
+          </button>
+          <button
+            class="button-language-change-to-russian btn btn-light"
+            type="button"
+          >
+            Russian
           </button>
         </div>
-      </li>
-      <li
-        class="d-flex align-items-center list-group-item list-group-item-action"
+      </div>
+    </aside>
+    <section
+      class="position-relative col"
+    >
+      <div
+        class="channel-view d-flex flex-column position-absolute"
+        style="top: 0px; bottom: 0px; left: 0px; right: 0px; margin-left: 15px; margin-right: 15px;"
       >
-        random
         <div
-          class="ml-auto btn-group btn-group-sm"
-          role="group"
+          class="mb-4 border rounded border-warning"
+          data-scrollbar="true"
+          style="overflow: hidden; outline: none;"
+          tabindex="1"
+        >
+          <div
+            class="scroll-content"
+          >
+            <ul
+              class="messages-box list-group list-group-flush"
+              style="min-height: 400px;"
+            >
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test1
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Sad_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test2
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test3
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-x show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-x"
+              style="transform: translate3d(NaNpx, 0, 0); -webkit-transform: translate3d(NaNpx, 0, 0);"
+            />
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-y show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-y"
+              style="transform: translate3d(0, NaNpx, 0); -webkit-transform: translate3d(0, NaNpx, 0);"
+            />
+          </div>
+        </div>
+        <form
+          class="mb-2 new-message-form"
+        >
+          <div
+            class="form-group"
+          >
+            <label
+              class="font-weight-bold form-label"
+              for="new-message-text"
+            >
+              Enter new message's text:
+            </label>
+            <textarea
+              class="form-control"
+              id="new-message-text"
+              name="text"
+              rows="3"
+              style="resize: none;"
+            >
+              I'm here! Look at me!
+            </textarea>
+          </div>
+          <div>
+            <button
+              class="float-right btn btn-primary"
+              type="submit"
+            >
+              Send
+            </button>
+            <div
+              class="clearfix"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Attemp to add a new message by the user 2`] = `
+<DocumentFragment>
+  <main
+    class="position-absolute row"
+    style="top: 0px; left: 0px; bottom: 0px; right: 0px;"
+  >
+    <aside
+      class="d-flex flex-column col-4"
+    >
+      <ul
+        class="channels-list list-group"
+      >
+        <li
+          class="channel-item d-flex align-items-center list-group-item active list-group-item-action"
+        >
+          general
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          random
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          my-channel
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+            <button
+              class="button-channel-remove btn btn-danger"
+              type="button"
+            >
+              Delete
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="mt-auto mb-2 language-panel"
+      >
+        <h5
+          class="text-center language-panel-label"
+        >
+          Choose language:
+        </h5>
+        <div
+          class="d-flex justify-content-around"
         >
           <button
-            class="btn btn-success"
+            class="button-language-change-to-english btn btn-success"
             type="button"
           >
-            Edit
+            English
+          </button>
+          <button
+            class="button-language-change-to-russian btn btn-light"
+            type="button"
+          >
+            Russian
           </button>
         </div>
-      </li>
-      <li
-        class="d-flex align-items-center list-group-item list-group-item-action"
+      </div>
+    </aside>
+    <section
+      class="position-relative col"
+    >
+      <div
+        class="channel-view d-flex flex-column position-absolute"
+        style="top: 0px; bottom: 0px; left: 0px; right: 0px; margin-left: 15px; margin-right: 15px;"
       >
-        my-channel
         <div
-          class="ml-auto btn-group btn-group-sm"
-          role="group"
+          class="mb-4 border rounded border-warning"
+          data-scrollbar="true"
+          style="overflow: hidden; outline: none;"
+          tabindex="1"
+        >
+          <div
+            class="scroll-content"
+          >
+            <ul
+              class="messages-box list-group list-group-flush"
+              style="min-height: 400px;"
+            >
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test1
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Sad_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test2
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test3
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-x show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-x"
+              style="transform: translate3d(NaNpx, 0, 0); -webkit-transform: translate3d(NaNpx, 0, 0);"
+            />
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-y show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-y"
+              style="transform: translate3d(0, NaNpx, 0); -webkit-transform: translate3d(0, NaNpx, 0);"
+            />
+          </div>
+        </div>
+        <form
+          class="mb-2 new-message-form"
+        >
+          <div
+            class="form-group"
+          >
+            <label
+              class="font-weight-bold form-label"
+              for="new-message-text"
+            >
+              Enter new message's text:
+            </label>
+            <textarea
+              class="form-control"
+              disabled=""
+              id="new-message-text"
+              name="text"
+              rows="3"
+              style="resize: none;"
+            >
+              I'm here! Look at me!
+            </textarea>
+          </div>
+          <div>
+            <button
+              class="float-right btn btn-primary"
+              disabled=""
+              type="submit"
+            >
+              <span
+                class="d-inline-block mr-2 spinner-border spinner-border-sm text-light"
+                role="status"
+              />
+              Sending...
+            </button>
+            <div
+              class="clearfix"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Attemp to add a new message by the user 3`] = `
+<DocumentFragment>
+  <main
+    class="position-absolute row"
+    style="top: 0px; left: 0px; bottom: 0px; right: 0px;"
+  >
+    <aside
+      class="d-flex flex-column col-4"
+    >
+      <ul
+        class="channels-list list-group"
+      >
+        <li
+          class="channel-item d-flex align-items-center list-group-item active list-group-item-action"
+        >
+          general
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          random
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          my-channel
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+            <button
+              class="button-channel-remove btn btn-danger"
+              type="button"
+            >
+              Delete
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="mt-auto mb-2 language-panel"
+      >
+        <h5
+          class="text-center language-panel-label"
+        >
+          Choose language:
+        </h5>
+        <div
+          class="d-flex justify-content-around"
         >
           <button
-            class="btn btn-success"
+            class="button-language-change-to-english btn btn-success"
             type="button"
           >
-            Edit
+            English
           </button>
           <button
-            class="btn btn-danger"
+            class="button-language-change-to-russian btn btn-light"
             type="button"
           >
-            Delete
+            Russian
           </button>
         </div>
-      </li>
-    </ul>
-  </aside>
-  <section
-    class="col"
-  />
-</main>
+      </div>
+    </aside>
+    <section
+      class="position-relative col"
+    >
+      <div
+        class="channel-view d-flex flex-column position-absolute"
+        style="top: 0px; bottom: 0px; left: 0px; right: 0px; margin-left: 15px; margin-right: 15px;"
+      >
+        <div
+          class="mb-4 border rounded border-warning"
+          data-scrollbar="true"
+          style="overflow: hidden; outline: none;"
+          tabindex="1"
+        >
+          <div
+            class="scroll-content"
+          >
+            <ul
+              class="messages-box list-group list-group-flush"
+              style="min-height: 400px;"
+            >
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test1
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Sad_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test2
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test3
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  I'm here! Look at me!
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-x show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-x"
+              style="transform: translate3d(NaNpx, 0, 0); -webkit-transform: translate3d(NaNpx, 0, 0);"
+            />
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-y show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-y"
+              style="transform: translate3d(0, NaNpx, 0); -webkit-transform: translate3d(0, NaNpx, 0);"
+            />
+          </div>
+        </div>
+        <form
+          class="mb-2 new-message-form"
+        >
+          <div
+            class="form-group"
+          >
+            <label
+              class="font-weight-bold form-label"
+              for="new-message-text"
+            >
+              Enter new message's text:
+            </label>
+            <textarea
+              class="form-control"
+              id="new-message-text"
+              name="text"
+              rows="3"
+              style="resize: none;"
+            />
+          </div>
+          <div>
+            <button
+              class="float-right btn btn-primary"
+              disabled=""
+              type="submit"
+            >
+              Send
+            </button>
+            <div
+              class="clearfix"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Attemp to add a new message by the user 4`] = `
+<DocumentFragment>
+  <main
+    class="position-absolute row"
+    style="top: 0px; left: 0px; bottom: 0px; right: 0px;"
+  >
+    <aside
+      class="d-flex flex-column col-4"
+    >
+      <ul
+        class="channels-list list-group"
+      >
+        <li
+          class="channel-item d-flex align-items-center list-group-item active list-group-item-action"
+        >
+          general
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          random
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          my-channel
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+            <button
+              class="button-channel-remove btn btn-danger"
+              type="button"
+            >
+              Delete
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="mt-auto mb-2 language-panel"
+      >
+        <h5
+          class="text-center language-panel-label"
+        >
+          Choose language:
+        </h5>
+        <div
+          class="d-flex justify-content-around"
+        >
+          <button
+            class="button-language-change-to-english btn btn-success"
+            type="button"
+          >
+            English
+          </button>
+          <button
+            class="button-language-change-to-russian btn btn-light"
+            type="button"
+          >
+            Russian
+          </button>
+        </div>
+      </div>
+    </aside>
+    <section
+      class="position-relative col"
+    >
+      <div
+        class="channel-view d-flex flex-column position-absolute"
+        style="top: 0px; bottom: 0px; left: 0px; right: 0px; margin-left: 15px; margin-right: 15px;"
+      >
+        <div
+          class="mb-4 border rounded border-warning"
+          data-scrollbar="true"
+          style="overflow: hidden; outline: none;"
+          tabindex="1"
+        >
+          <div
+            class="scroll-content"
+          >
+            <ul
+              class="messages-box list-group list-group-flush"
+              style="min-height: 400px;"
+            >
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test1
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Sad_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test2
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test3
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  I'm here! Look at me!
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-x show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-x"
+              style="transform: translate3d(NaNpx, 0, 0); -webkit-transform: translate3d(NaNpx, 0, 0);"
+            />
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-y show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-y"
+              style="transform: translate3d(0, NaNpx, 0); -webkit-transform: translate3d(0, NaNpx, 0);"
+            />
+          </div>
+        </div>
+        <form
+          class="mb-2 new-message-form"
+        >
+          <div
+            class="form-group"
+          >
+            <label
+              class="font-weight-bold form-label"
+              for="new-message-text"
+            >
+              Enter new message's text:
+            </label>
+            <textarea
+              class="form-control"
+              id="new-message-text"
+              name="text"
+              rows="3"
+              style="resize: none;"
+            >
+              I'm here! Look at me!
+            </textarea>
+          </div>
+          <div>
+            <div
+              class="fade new-message-sending-error float-left m-0 px-3 py-0 alert alert-danger show"
+              role="alert"
+              style="height: 38px; line-height: 38px;"
+            >
+              An error occurred while sending the message. Try again later.
+            </div>
+            <button
+              class="float-right btn btn-primary"
+              type="submit"
+            >
+              Send
+            </button>
+            <div
+              class="clearfix"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Attemp to change a interface's language 1`] = `
+<DocumentFragment>
+  <main
+    class="position-absolute row"
+    style="top: 0px; left: 0px; bottom: 0px; right: 0px;"
+  >
+    <aside
+      class="d-flex flex-column col-4"
+    >
+      <ul
+        class="channels-list list-group"
+      >
+        <li
+          class="channel-item d-flex align-items-center list-group-item active list-group-item-action"
+        >
+          general
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Ред.
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          random
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Ред.
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          my-channel
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Ред.
+            </button>
+            <button
+              class="button-channel-remove btn btn-danger"
+              type="button"
+            >
+              Удл.
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="mt-auto mb-2 language-panel"
+      >
+        <h5
+          class="text-center language-panel-label"
+        >
+          Выберите язык:
+        </h5>
+        <div
+          class="d-flex justify-content-around"
+        >
+          <button
+            class="button-language-change-to-english btn btn-light"
+            type="button"
+          >
+            Английский
+          </button>
+          <button
+            class="button-language-change-to-russian btn btn-success"
+            type="button"
+          >
+            Русский
+          </button>
+        </div>
+      </div>
+    </aside>
+    <section
+      class="position-relative col"
+    >
+      <div
+        class="channel-view d-flex flex-column position-absolute"
+        style="top: 0px; bottom: 0px; left: 0px; right: 0px; margin-left: 15px; margin-right: 15px;"
+      >
+        <div
+          class="mb-4 border rounded border-warning"
+          data-scrollbar="true"
+          style="overflow: hidden; outline: none;"
+          tabindex="1"
+        >
+          <div
+            class="scroll-content"
+          >
+            <ul
+              class="messages-box list-group list-group-flush"
+              style="min-height: 400px;"
+            >
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test1
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Sad_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test2
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test3
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  I'm here! Look at me!
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-x show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-x"
+              style="transform: translate3d(NaNpx, 0, 0); -webkit-transform: translate3d(NaNpx, 0, 0);"
+            />
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-y show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-y"
+              style="transform: translate3d(0, NaNpx, 0); -webkit-transform: translate3d(0, NaNpx, 0);"
+            />
+          </div>
+        </div>
+        <form
+          class="mb-2 new-message-form"
+        >
+          <div
+            class="form-group"
+          >
+            <label
+              class="font-weight-bold form-label"
+              for="new-message-text"
+            >
+              Введите текст нового сообщения:
+            </label>
+            <textarea
+              class="form-control"
+              id="new-message-text"
+              name="text"
+              rows="3"
+              style="resize: none;"
+            >
+              I'm here! Look at me!
+            </textarea>
+          </div>
+          <div>
+            <div
+              class="fade new-message-sending-error float-left m-0 px-3 py-0 alert alert-danger show"
+              role="alert"
+              style="height: 38px; line-height: 38px;"
+            >
+              Во время отправки сообщения произошла ошибка. Попробуйте позже.
+            </div>
+            <button
+              class="float-right btn btn-primary"
+              type="submit"
+            >
+              Отправить
+            </button>
+            <div
+              class="clearfix"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Attemp to change a interface's language 2`] = `
+<DocumentFragment>
+  <main
+    class="position-absolute row"
+    style="top: 0px; left: 0px; bottom: 0px; right: 0px;"
+  >
+    <aside
+      class="d-flex flex-column col-4"
+    >
+      <ul
+        class="channels-list list-group"
+      >
+        <li
+          class="channel-item d-flex align-items-center list-group-item active list-group-item-action"
+        >
+          general
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          random
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          my-channel
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+            <button
+              class="button-channel-remove btn btn-danger"
+              type="button"
+            >
+              Delete
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="mt-auto mb-2 language-panel"
+      >
+        <h5
+          class="text-center language-panel-label"
+        >
+          Choose language:
+        </h5>
+        <div
+          class="d-flex justify-content-around"
+        >
+          <button
+            class="button-language-change-to-english btn btn-success"
+            type="button"
+          >
+            English
+          </button>
+          <button
+            class="button-language-change-to-russian btn btn-light"
+            type="button"
+          >
+            Russian
+          </button>
+        </div>
+      </div>
+    </aside>
+    <section
+      class="position-relative col"
+    >
+      <div
+        class="channel-view d-flex flex-column position-absolute"
+        style="top: 0px; bottom: 0px; left: 0px; right: 0px; margin-left: 15px; margin-right: 15px;"
+      >
+        <div
+          class="mb-4 border rounded border-warning"
+          data-scrollbar="true"
+          style="overflow: hidden; outline: none;"
+          tabindex="1"
+        >
+          <div
+            class="scroll-content"
+          >
+            <ul
+              class="messages-box list-group list-group-flush"
+              style="min-height: 400px;"
+            >
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test1
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Sad_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test2
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test3
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  I'm here! Look at me!
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-x show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-x"
+              style="transform: translate3d(NaNpx, 0, 0); -webkit-transform: translate3d(NaNpx, 0, 0);"
+            />
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-y show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-y"
+              style="transform: translate3d(0, NaNpx, 0); -webkit-transform: translate3d(0, NaNpx, 0);"
+            />
+          </div>
+        </div>
+        <form
+          class="mb-2 new-message-form"
+        >
+          <div
+            class="form-group"
+          >
+            <label
+              class="font-weight-bold form-label"
+              for="new-message-text"
+            >
+              Enter new message's text:
+            </label>
+            <textarea
+              class="form-control"
+              id="new-message-text"
+              name="text"
+              rows="3"
+              style="resize: none;"
+            >
+              I'm here! Look at me!
+            </textarea>
+          </div>
+          <div>
+            <div
+              class="fade new-message-sending-error float-left m-0 px-3 py-0 alert alert-danger show"
+              role="alert"
+              style="height: 38px; line-height: 38px;"
+            >
+              An error occurred while sending the message. Try again later.
+            </div>
+            <button
+              class="float-right btn btn-primary"
+              type="submit"
+            >
+              Send
+            </button>
+            <div
+              class="clearfix"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Check socket.IO real-time getting messages 1`] = `
+<DocumentFragment>
+  <main
+    class="position-absolute row"
+    style="top: 0px; left: 0px; bottom: 0px; right: 0px;"
+  >
+    <aside
+      class="d-flex flex-column col-4"
+    >
+      <ul
+        class="channels-list list-group"
+      >
+        <li
+          class="channel-item d-flex align-items-center list-group-item active list-group-item-action"
+        >
+          general
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          random
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          my-channel
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+            <button
+              class="button-channel-remove btn btn-danger"
+              type="button"
+            >
+              Delete
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="mt-auto mb-2 language-panel"
+      >
+        <h5
+          class="text-center language-panel-label"
+        >
+          Choose language:
+        </h5>
+        <div
+          class="d-flex justify-content-around"
+        >
+          <button
+            class="button-language-change-to-english btn btn-success"
+            type="button"
+          >
+            English
+          </button>
+          <button
+            class="button-language-change-to-russian btn btn-light"
+            type="button"
+          >
+            Russian
+          </button>
+        </div>
+      </div>
+    </aside>
+    <section
+      class="position-relative col"
+    >
+      <div
+        class="channel-view d-flex flex-column position-absolute"
+        style="top: 0px; bottom: 0px; left: 0px; right: 0px; margin-left: 15px; margin-right: 15px;"
+      >
+        <div
+          class="mb-4 border rounded border-warning"
+          data-scrollbar="true"
+          style="overflow: hidden; outline: none;"
+          tabindex="1"
+        >
+          <div
+            class="scroll-content"
+          >
+            <ul
+              class="messages-box list-group list-group-flush"
+              style="min-height: 400px;"
+            >
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test1
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Sad_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test2
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test3
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  I'm here! Look at me!
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Sad_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  New message!
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-x show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-x"
+              style="transform: translate3d(NaNpx, 0, 0); -webkit-transform: translate3d(NaNpx, 0, 0);"
+            />
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-y show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-y"
+              style="transform: translate3d(0, NaNpx, 0); -webkit-transform: translate3d(0, NaNpx, 0);"
+            />
+          </div>
+        </div>
+        <form
+          class="mb-2 new-message-form"
+        >
+          <div
+            class="form-group"
+          >
+            <label
+              class="font-weight-bold form-label"
+              for="new-message-text"
+            >
+              Enter new message's text:
+            </label>
+            <textarea
+              class="form-control"
+              id="new-message-text"
+              name="text"
+              rows="3"
+              style="resize: none;"
+            >
+              I'm here! Look at me!
+            </textarea>
+          </div>
+          <div>
+            <div
+              class="fade new-message-sending-error float-left m-0 px-3 py-0 alert alert-danger show"
+              role="alert"
+              style="height: 38px; line-height: 38px;"
+            >
+              An error occurred while sending the message. Try again later.
+            </div>
+            <button
+              class="float-right btn btn-primary"
+              type="submit"
+            >
+              Send
+            </button>
+            <div
+              class="clearfix"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Check socket.IO real-time getting messages 2`] = `
+<DocumentFragment>
+  <main
+    class="position-absolute row"
+    style="top: 0px; left: 0px; bottom: 0px; right: 0px;"
+  >
+    <aside
+      class="d-flex flex-column col-4"
+    >
+      <ul
+        class="channels-list list-group"
+      >
+        <li
+          class="channel-item d-flex align-items-center list-group-item active list-group-item-action"
+        >
+          general
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          random
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          my-channel
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+            <button
+              class="button-channel-remove btn btn-danger"
+              type="button"
+            >
+              Delete
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="mt-auto mb-2 language-panel"
+      >
+        <h5
+          class="text-center language-panel-label"
+        >
+          Choose language:
+        </h5>
+        <div
+          class="d-flex justify-content-around"
+        >
+          <button
+            class="button-language-change-to-english btn btn-success"
+            type="button"
+          >
+            English
+          </button>
+          <button
+            class="button-language-change-to-russian btn btn-light"
+            type="button"
+          >
+            Russian
+          </button>
+        </div>
+      </div>
+    </aside>
+    <section
+      class="position-relative col"
+    >
+      <div
+        class="channel-view d-flex flex-column position-absolute"
+        style="top: 0px; bottom: 0px; left: 0px; right: 0px; margin-left: 15px; margin-right: 15px;"
+      >
+        <div
+          class="mb-4 border rounded border-warning"
+          data-scrollbar="true"
+          style="overflow: hidden; outline: none;"
+          tabindex="1"
+        >
+          <div
+            class="scroll-content"
+          >
+            <ul
+              class="messages-box list-group list-group-flush"
+              style="min-height: 400px;"
+            >
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test1
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Sad_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test2
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test3
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  I'm here! Look at me!
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Sad_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  New message!
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-x show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-x"
+              style="transform: translate3d(NaNpx, 0, 0); -webkit-transform: translate3d(NaNpx, 0, 0);"
+            />
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-y show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-y"
+              style="transform: translate3d(0, NaNpx, 0); -webkit-transform: translate3d(0, NaNpx, 0);"
+            />
+          </div>
+        </div>
+        <form
+          class="mb-2 new-message-form"
+        >
+          <div
+            class="form-group"
+          >
+            <label
+              class="font-weight-bold form-label"
+              for="new-message-text"
+            >
+              Enter new message's text:
+            </label>
+            <textarea
+              class="form-control"
+              id="new-message-text"
+              name="text"
+              rows="3"
+              style="resize: none;"
+            >
+              I'm here! Look at me!
+            </textarea>
+          </div>
+          <div>
+            <div
+              class="fade new-message-sending-error float-left m-0 px-3 py-0 alert alert-danger show"
+              role="alert"
+              style="height: 38px; line-height: 38px;"
+            >
+              An error occurred while sending the message. Try again later.
+            </div>
+            <button
+              class="float-right btn btn-primary"
+              type="submit"
+            >
+              Send
+            </button>
+            <div
+              class="clearfix"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Init state render 1`] = `
+<DocumentFragment>
+  <main
+    class="position-absolute row"
+    style="top: 0px; left: 0px; bottom: 0px; right: 0px; display: none;"
+  >
+    <aside
+      class="d-flex flex-column col-4"
+    />
+    <section
+      class="position-relative col"
+    >
+      <div
+        class="channel-view d-flex flex-column position-absolute"
+        style="top: 0px; bottom: 0px; left: 0px; right: 0px; margin-left: 15px; margin-right: 15px;"
+      />
+    </section>
+  </main>
+  <div
+    class="position-fixed d-flex justify-content-center align-items-center"
+    style="top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 5000; background-color: rgba(0, 0, 0, 0.2);"
+  >
+    <div
+      class="spinner-border text-primary"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Init state render 2`] = `
+<DocumentFragment>
+  <main
+    class="position-absolute row"
+    style="top: 0px; left: 0px; bottom: 0px; right: 0px;"
+  >
+    <aside
+      class="d-flex flex-column col-4"
+    >
+      <ul
+        class="channels-list list-group"
+      >
+        <li
+          class="channel-item d-flex align-items-center list-group-item active list-group-item-action"
+        >
+          general
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          random
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+          </div>
+        </li>
+        <li
+          class="channel-item d-flex align-items-center list-group-item list-group-item-action"
+        >
+          my-channel
+          <div
+            class="ml-auto btn-group btn-group-sm"
+            role="group"
+          >
+            <button
+              class="button-channel-edit btn btn-success"
+              type="button"
+            >
+              Edit
+            </button>
+            <button
+              class="button-channel-remove btn btn-danger"
+              type="button"
+            >
+              Delete
+            </button>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="mt-auto mb-2 language-panel"
+      >
+        <h5
+          class="text-center language-panel-label"
+        >
+          Choose language:
+        </h5>
+        <div
+          class="d-flex justify-content-around"
+        >
+          <button
+            class="button-language-change-to-english btn btn-success"
+            type="button"
+          >
+            English
+          </button>
+          <button
+            class="button-language-change-to-russian btn btn-light"
+            type="button"
+          >
+            Russian
+          </button>
+        </div>
+      </div>
+    </aside>
+    <section
+      class="position-relative col"
+    >
+      <div
+        class="channel-view d-flex flex-column position-absolute"
+        style="top: 0px; bottom: 0px; left: 0px; right: 0px; margin-left: 15px; margin-right: 15px;"
+      >
+        <div
+          class="mb-4 border rounded border-warning"
+          data-scrollbar="true"
+          style="overflow: hidden; outline: none;"
+          tabindex="1"
+        >
+          <div
+            class="scroll-content"
+          >
+            <ul
+              class="messages-box list-group list-group-flush"
+              style="min-height: 400px;"
+            >
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test1
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Sad_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test2
+                </div>
+              </div>
+              <div
+                class="message list-group-item"
+              >
+                <small
+                  class="border-bottom border-success message-author"
+                >
+                  Funny_User:
+                </small>
+                <div
+                  class="mt-2 text-break message-text"
+                >
+                  Test3
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-x show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-x"
+              style="transform: translate3d(NaNpx, 0, 0); -webkit-transform: translate3d(NaNpx, 0, 0);"
+            />
+          </div>
+          <div
+            class="scrollbar-track scrollbar-track-y show"
+            style="display: none;"
+          >
+            <div
+              class="scrollbar-thumb scrollbar-thumb-y"
+              style="transform: translate3d(0, NaNpx, 0); -webkit-transform: translate3d(0, NaNpx, 0);"
+            />
+          </div>
+        </div>
+        <form
+          class="mb-2 new-message-form"
+        >
+          <div
+            class="form-group"
+          >
+            <label
+              class="font-weight-bold form-label"
+              for="new-message-text"
+            >
+              Enter new message's text:
+            </label>
+            <textarea
+              class="form-control"
+              id="new-message-text"
+              name="text"
+              rows="3"
+              style="resize: none;"
+            />
+          </div>
+          <div>
+            <button
+              class="float-right btn btn-primary"
+              disabled=""
+              type="submit"
+            >
+              Send
+            </button>
+            <div
+              class="clearfix"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
 `;

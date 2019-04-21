@@ -1,30 +1,32 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import _ from 'lodash';
+import { withTranslation } from 'react-i18next';
 import {
-  Col,
   ListGroup,
   ButtonGroup,
   Button,
 } from 'react-bootstrap';
 
-import { channelsSelector } from '../selectors';
+import connect from '../../lib/connect';
+import { channelsSelector, currentChannelIdSelector } from '../selectors';
 
 const mapStateToProps = state => ({
   channels: channelsSelector(state),
-  currentChannelId: state.channels.currentChannelId,
+  currentChannelId: currentChannelIdSelector(state),
 });
 
+@connect(mapStateToProps)
+@withTranslation()
 class ChannelsList extends React.Component {
   renderChannel = (channel) => {
-    const { currentChannelId } = this.props;
+    const { currentChannelId, t } = this.props;
 
     return (
-      <ListGroup.Item key={channel.id} as="li" action active={channel.id === currentChannelId} className="d-flex align-items-center">
+      <ListGroup.Item key={channel.id} as="li" action active={channel.id === currentChannelId} className="channel-item d-flex align-items-center">
         {channel.name}
         <ButtonGroup size="sm" className="ml-auto">
-          <Button variant="success">Edit</Button>
-          {channel.removable && <Button variant="danger">Delete</Button>}
+          <Button className="button-channel-edit" variant="success">{t('labels:buttons.channel.edit')}</Button>
+          {channel.removable && <Button className="button-channel-remove" variant="danger">{t('labels:buttons.channel.delete')}</Button>}
         </ButtonGroup>
       </ListGroup.Item>
     );
@@ -34,13 +36,11 @@ class ChannelsList extends React.Component {
     const { channels } = this.props;
 
     return (
-      <Col as="aside" xs={4}>
-        <ListGroup as="ul">
-          {_.map(channels, this.renderChannel)}
-        </ListGroup>
-      </Col>
+      <ListGroup as="ul" className="channels-list">
+        {_.map(channels, this.renderChannel)}
+      </ListGroup>
     );
   }
 }
 
-export default connect(mapStateToProps)(ChannelsList);
+export default ChannelsList;

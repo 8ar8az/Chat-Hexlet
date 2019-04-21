@@ -2,22 +2,22 @@
 import _ from 'lodash';
 import Router from 'koa-router';
 
-const getNextId = () => Number(_.uniqueId());
-
-const generalChannelId = getNextId();
-const randomChannelId = getNextId();
-
-export const defaultState = {
-  channels: [
-    { id: generalChannelId, name: 'general', removable: false },
-    { id: randomChannelId, name: 'random', removable: false },
-    { id: 4, name: 'my-channel', removable: true },
-  ],
-  messages: [],
-  currentChannelId: generalChannelId,
-};
+export const getNextId = () => Number(_.uniqueId());
 
 export default (router, io) => {
+  const generalChannelId = getNextId();
+  const randomChannelId = getNextId();
+
+  const defaultState = {
+    channels: [
+      { id: generalChannelId, name: 'general', removable: false },
+      { id: randomChannelId, name: 'random', removable: false },
+      { id: getNextId(), name: 'my-channel', removable: true },
+    ],
+    messages: [],
+    currentChannelId: generalChannelId,
+  };
+
   const state = { ...defaultState };
 
   const apiRouter = new Router();
