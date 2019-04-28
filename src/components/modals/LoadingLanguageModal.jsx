@@ -10,10 +10,10 @@ const style = {
   backgroundColor: 'rgba(0, 0, 0, 0.2)',
 };
 
-const LanguageLoadingModal = () => (
+const LoadingLanguageModal = () => (
   <div className="position-fixed d-flex justify-content-center align-items-center" style={style}>
     <Spinner animation="border" variant="primary" />
   </div>
 );
 
-export default LanguageLoadingModal;
+export default LoadingLanguageModal;

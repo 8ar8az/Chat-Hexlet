@@ -1,16 +1,16 @@
 import path from 'path';
 
-const API_PART_URL = 'api/v1';
-const CHANNELS_PART_URL = 'channels';
-const MESSAGES_PART_URL = 'messages';
+const apiPartURL = 'api/v1';
+const channelsPartURL = 'channels';
+const messagesPartURL = 'messages';
 
 export default {
-  allChannels: () => path.resolve(API_PART_URL, CHANNELS_PART_URL),
-  particularChannel: channelId => path.resolve(API_PART_URL, CHANNELS_PART_URL, String(channelId)),
-  messagesForParticularChannel: channelId => path.resolve(
-    API_PART_URL,
-    CHANNELS_PART_URL,
+  allChannels: () => path.join(apiPartURL, channelsPartURL),
+  particularChannel: channelId => path.join(apiPartURL, channelsPartURL, String(channelId)),
+  messagesForParticularChannel: channelId => path.join(
+    apiPartURL,
+    channelsPartURL,
     String(channelId),
-    MESSAGES_PART_URL,
+    messagesPartURL,
   ),
 };

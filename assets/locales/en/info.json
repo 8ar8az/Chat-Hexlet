@@ -1,3 +1,4 @@
 {
-  "channelHasNotMessage": "This channel does not have any messages yet... :("
+  "channelHasNotMessage": "This channel does not have any messages yet... :(",
+  "channelHasBeenRemoving": "The channel has removed while you have been edited it... :("
 }

@@ -7,7 +7,9 @@ class LanguagePanel extends React.Component {
   handleButtonClick = (language) => {
     const { i18n } = this.props;
 
-    i18n.changeLanguage(language);
+    setImmediate(() => {
+      i18n.changeLanguage(language);
+    });
   };
 
   handleChangeLanguageToEnglish = () => {
@@ -32,8 +34,8 @@ class LanguagePanel extends React.Component {
     const { t } = this.props;
 
     return (
-      <div className="mt-auto mb-2 language-panel">
-        <h5 className="text-center language-panel-label">{t('labels:inputs.languageChoice')}</h5>
+      <div className="mb-2 language-panel">
+        <h5 className="text-center language-panel-label">{t('labels:headers.languagesSwitch')}</h5>
         <div className="d-flex justify-content-around">
           <Button className="button-language-change-to-english" variant={this.getButtonVatiant('en')} onClick={this.handleChangeLanguageToEnglish}>{t('labels:buttons.language.english')}</Button>
           <Button className="button-language-change-to-russian" variant={this.getButtonVatiant('ru')} onClick={this.handleChangeLanguageToRussian}>{t('labels:buttons.language.russian')}</Button>

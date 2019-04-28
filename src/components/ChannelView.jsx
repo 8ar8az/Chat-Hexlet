@@ -2,7 +2,7 @@ import React from 'react';
 
 import connect from '../../lib/connect';
 import MessagesBox from './MessagesBox';
-import NewMessageForm from './NewMessageForm';
+import NewMessageForm from './forms/NewMessageForm';
 import { currentChannelIdSelector } from '../selectors';
 
 const mapStateToProps = state => ({
@@ -14,8 +14,6 @@ const style = {
   bottom: 0,
   left: 0,
   right: 0,
-  marginLeft: '15px',
-  marginRight: '15px',
 };
 
 @connect(mapStateToProps)
@@ -24,9 +22,9 @@ class ChannelView extends React.Component {
     const { currentChannelId } = this.props;
 
     return (
-      <div className="channel-view d-flex flex-column position-absolute" style={style}>
+      <div className="channel-view d-flex flex-column position-absolute mx-3" style={style}>
         <MessagesBox />
-        <NewMessageForm form={`newMessageForChannel-${currentChannelId}`} />
+        <NewMessageForm key={currentChannelId} form={`newMessageForChannel-${currentChannelId}`} />
       </div>
     );
   }

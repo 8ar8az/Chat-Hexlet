@@ -1,11 +1,5 @@
 {
   "buttons": {
-    "messageSending": "Отправить",
-    "messageSending_inProcess": "Отправляем...",
-    "channel": {
-      "edit": "Ред.",
-      "delete": "Удл."
-    },
     "language": {
       "english": "Английский",
       "russian": "Русский"
@@ -13,6 +7,15 @@
   },
   "inputs": {
     "newMessageText": "Введите текст нового сообщения:",
-    "languageChoice": "Выберите язык:"
+    "channels": {
+      "adding": "Введите название канала:",
+      "updating": "Измените название канала:",
+      "removing": "Удалить канал?",
+      "nameFieldPlaceholder": "Название канала..."
+    }
+  },
+  "headers": {
+    "languagesSwitch": "Выберите язык:",
+    "channelsSwitch": "Каналы:"
   }
 }

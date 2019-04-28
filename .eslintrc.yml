@@ -3,21 +3,13 @@
 extends:
   - airbnb
   - "plugin:jest/recommended"
-  - "plugin:react/recommended"
   - "plugin:lodash/recommended"
-  - "plugin:import/errors"
-  - "plugin:import/warnings"
-  - "plugin:jsx-a11y/recommended"
 
 parser: babel-eslint
 
 plugins:
-  - jsx-a11y
   - jest
-  - babel
   - lodash
-  - import
-  - react
 
 env:
   browser: true
@@ -33,5 +25,4 @@ rules:
     - 2
     - ignore:
       - gon
-  react/prop-types:
-    - 0
+  react/prop-types: 0

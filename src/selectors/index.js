@@ -7,9 +7,28 @@ const getChannelsAllIds = state => state.channels.allIds;
 const getMessagesById = state => state.messages.byId;
 const getMessagesAllIds = state => state.messages.allIds;
 
+const getUpdatingChannelId = state => state.updatingChannelDialogState.updatingChannelId;
+
 export const currentChannelIdSelector = state => state.channels.currentChannelId;
 
-export const messagesBoxAlignToBottomStateSelector = state => state.messagesBoxAlignToBottomState;
+export const messagesBoxBottomAlignStateSelector = state => state.messagesBoxBottomAlignState;
+
+export const addingChannelDialogDisplaySelector = state => state.addingChannelDialogState;
+export const updatingChannelDialogDisplaySelector = (state) => {
+  const { updatingChannelDialogState: { display } } = state;
+  return display;
+};
+export const removingChannelDialogDisplaySelector = (
+  state,
+  props,
+) => state.removingChannelDialogState[props.removingChannelId];
+
+export const channelAddingStateSelector = state => state.channelAddingState;
+export const channelUpdatingStateSelector = state => state.channelUpdatingState;
+export const channelRemovingStateSelector = (
+  state,
+  props,
+) => state.channelRemovingState[props.removingChannelId];
 
 export const channelsSelector = createSelector(
   [getChannelsById, getChannelsAllIds],
@@ -37,4 +56,9 @@ export const messagesForCurrentChannelSelector = createSelector(
 
     return _.sortBy(messagesForCurrentChannel, 'id');
   },
+);
+
+export const updatingChannelSelector = createSelector(
+  [getChannelsById, getUpdatingChannelId],
+  (channelsById, channelForEditId) => channelsById[channelForEditId],
 );

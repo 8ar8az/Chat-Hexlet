@@ -1,12 +1,12 @@
+import cn from 'classnames';
+import _ from 'lodash';
 import React from 'react';
 import { ListGroup } from 'react-bootstrap';
 import { withTranslation } from 'react-i18next';
-import _ from 'lodash';
-import cn from 'classnames';
 
 import connect from '../../lib/connect';
-import { messagesForCurrentChannelSelector, messagesBoxAlignToBottomStateSelector } from '../selectors';
-import ScrollableContainer from './ScrollableContainer';
+import { messagesBoxBottomAlignStateSelector, messagesForCurrentChannelSelector } from '../selectors';
+import ScrollableContainer from './containers/ScrollableContainer';
 
 const style = {
   minHeight: '400px',
@@ -14,7 +14,7 @@ const style = {
 
 const mapStateToProps = state => ({
   messages: messagesForCurrentChannelSelector(state),
-  messagesBoxAlignToBottomState: messagesBoxAlignToBottomStateSelector(state),
+  messagesBoxBottomAlignState: messagesBoxBottomAlignStateSelector(state),
 });
 
 @connect(mapStateToProps)
@@ -22,7 +22,7 @@ const mapStateToProps = state => ({
 class MessagesBox extends React.Component {
   handleScroll = (scrollStatus) => {
     const {
-      messagesBoxAlignToBottomState,
+      messagesBoxBottomAlignState,
       setMessageBoxAlignToBottom,
       unsetMessageBoxAlignToBottom,
     } = this.props;
@@ -32,15 +32,15 @@ class MessagesBox extends React.Component {
       limit: { y: limitY },
     } = scrollStatus;
 
-    if (offsetY === limitY && !messagesBoxAlignToBottomState) {
+    if ((offsetY === limitY) && (messagesBoxBottomAlignState === 'off')) {
       setMessageBoxAlignToBottom();
-    } else if (offsetY !== limitY && messagesBoxAlignToBottomState) {
+    } else if ((offsetY !== limitY) && (messagesBoxBottomAlignState === 'on')) {
       unsetMessageBoxAlignToBottom();
     }
   };
 
   renderMessage = message => (
-    <ListGroup.Item key={message.id} className="message">
+    <ListGroup.Item key={message.id} className="message border-top">
       <small className="border-bottom border-success message-author">{`${message.author.username}:`}</small>
       <div className="mt-2 text-break message-text">{message.text}</div>
     </ListGroup.Item>
@@ -49,7 +49,7 @@ class MessagesBox extends React.Component {
   render() {
     const {
       messages,
-      messagesBoxAlignToBottomState,
+      messagesBoxBottomAlignState,
       t,
     } = this.props;
 
@@ -65,7 +65,7 @@ class MessagesBox extends React.Component {
     });
 
     return (
-      <ScrollableContainer className="mb-4 border rounded border-warning" onScroll={this.handleScroll} alignToBottom={messagesBoxAlignToBottomState}>
+      <ScrollableContainer className="mb-4 border rounded border-warning" onScroll={this.handleScroll} alignToBottom={messagesBoxBottomAlignState === 'on'}>
         <ListGroup as="ul" variant="flush" className={classes} style={style}>
           {boxContent}
         </ListGroup>

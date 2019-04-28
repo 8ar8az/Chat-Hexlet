@@ -1,11 +1,11 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-import ChannelsList from './ChannelsList';
+import ChannelsPanel from './ChannelsPanel';
 import ChannelView from './ChannelView';
 import LanguagePanel from './LanguagePanel';
 
-const styleForMain = {
+const style = {
   top: 0,
   left: 0,
   bottom: 0,
@@ -13,9 +13,9 @@ const styleForMain = {
 };
 
 const App = () => (
-  <Row as="main" className="position-absolute" style={styleForMain}>
+  <Row as="main" className="position-absolute" style={style}>
     <Col as="aside" xs={4} className="d-flex flex-column">
-      <ChannelsList />
+      <ChannelsPanel />
       <LanguagePanel />
     </Col>
     <Col as="section" className="position-relative">
