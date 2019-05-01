@@ -36,6 +36,9 @@ export const addChannelByServer = createAction('CHANNEL_ADD_BY_SERVER');
 export const removeChannelByServer = createAction('CHANNEL_REMOVE_BY_SERVER');
 export const updateChannelByServer = createAction('CHANNEL_UPDATE_BY_SERVER');
 
+export const connectWithServer = createAction('CONNECTION_WITH_SERVER_SET_ONLINE');
+export const disconnectWithServer = createAction('CONNECTION_WITH_SERVER_SET_OFFLINE');
+
 export const sendMessage = ({ message, currentChannelId }) => async (dispatch) => {
   const requestData = { type: 'messages', attributes: { ...message } };
   const url = routes.messagesForParticularChannel(currentChannelId);

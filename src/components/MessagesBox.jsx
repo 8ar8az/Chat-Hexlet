@@ -9,7 +9,7 @@ import { messagesBoxBottomAlignStateSelector, messagesForCurrentChannelSelector 
 import ScrollableContainer from './containers/ScrollableContainer';
 
 const style = {
-  minHeight: '400px',
+  minHeight: '200px',
 };
 
 const mapStateToProps = state => ({

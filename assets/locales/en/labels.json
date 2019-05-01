@@ -17,5 +17,6 @@
   "headers": {
     "languagesSwitch": "Choose language:",
     "channelsSwitch": "Channels:"
-  }
+  },
+  "dashboard": "Dashboard"
 }

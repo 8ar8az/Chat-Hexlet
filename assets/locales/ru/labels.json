@@ -17,5 +17,6 @@
   "headers": {
     "languagesSwitch": "Выберите язык:",
     "channelsSwitch": "Каналы:"
-  }
+  },
+  "dashboard": "Панель управления"
 }

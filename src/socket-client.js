@@ -10,6 +10,7 @@ export default (socketClient, storeDispatch, currentUser, socketLog) => {
   socket
     .on('connect', () => {
       socketLog('Socket-client has been connected');
+      storeDispatch(actions.connectWithServer());
     })
     .on('connect_error', (err) => {
       socketLog('Error occurs during socket client attempts to connect with the server: %O', err);
@@ -22,6 +23,7 @@ export default (socketClient, storeDispatch, currentUser, socketLog) => {
     })
     .on('disconnect', (reason) => {
       socketLog("Socket's client-server connection has been disconnected by reason: %O", reason);
+      storeDispatch(actions.disconnectWithServer());
     })
     .on('newChannel', (data) => {
       logNewMessageFromServer('newChannel', data);

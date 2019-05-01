@@ -133,6 +133,11 @@ const messagesBoxBottomAlignState = handleActions({
   [actions.unsetMessageBoxAlignToBottom]: _.constant('off'),
 }, 'on');
 
+const connectionWithServerState = handleActions({
+  [actions.connectWithServer]: _.constant('online'),
+  [actions.disconnectWithServer]: _.constant('offline'),
+}, 'offline');
+
 export default combineReducers({
   channels,
   messages,
@@ -143,5 +148,6 @@ export default combineReducers({
   updatingChannelDialogState,
   removingChannelDialogState,
   messagesBoxBottomAlignState,
+  connectionWithServerState,
   form: formReducer,
 });

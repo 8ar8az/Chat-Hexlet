@@ -32,6 +32,14 @@ jest.mock('popper.js', () => {
   };
 });
 
+window.matchMedia = jest.fn().mockImplementation(query => ({
+  matches: true,
+  media: query,
+  onchange: null,
+  addListener: jest.fn(),
+  removeListener: jest.fn(),
+}));
+
 const generalChannelId = getNextId();
 const generalChannelName = 'general';
 const user1 = { id: getNextId(), username: 'Funny_User' };
@@ -91,6 +99,17 @@ let container;
 let getByPlaceholderText;
 
 let store;
+
+const closePoppover = async (poppoverId) => {
+  const languagePanelHeader = getByText('Choose language:');
+  const poppover = document.body.querySelector(poppoverId);
+  fireEvent.click(languagePanelHeader);
+  await wait(() => {
+    if (document.body.contains(poppover)) {
+      throw new Error();
+    }
+  });
+};
 
 beforeAll(() => {
   nock.disableNetConnect();
@@ -188,14 +207,7 @@ test('Attempt to add new channel', async () => {
 
   await addChannel(nameForChannelUpdating);
   await waitForElement(() => getByText('An error occurred while sending the data. Try again later.'));
-  const languagePanelHeader = getByText('Choose language:');
-  const addingChannelPoppover = document.body.querySelector('#adding-channel-popover');
-  fireEvent.click(languagePanelHeader);
-  await wait(() => {
-    if (document.body.contains(addingChannelPoppover)) {
-      throw new Error();
-    }
-  });
+  await closePoppover();
 });
 
 test('Attempt to update channel', async () => {
@@ -249,7 +261,7 @@ test('Attempt to update channel', async () => {
 
   await updateChannel(updatingChannel, 'wrong-channel');
   await waitForElement(() => getByText('An error occurred while sending the data. Try again later.'));
-  await closeChannelUpdatingModal();
+  await closePoppover('#adding-channel-popover');
 });
 
 test('Attempt to remove channel', async () => {
@@ -285,14 +297,7 @@ test('Attempt to remove channel', async () => {
   const addedChannel = getByText(nameForChannelUpdating);
   await removeChannel(addedChannel);
   await waitForElement(() => getByText('An error occurred while sending the data. Try again later.'));
-  const languagePanelHeader = getByText('Choose language:');
-  const removingChannelPoppover = document.body.querySelector('#removing-channel-popover');
-  fireEvent.click(languagePanelHeader);
-  await wait(() => {
-    if (document.body.contains(removingChannelPoppover)) {
-      throw new Error();
-    }
-  });
+  await closePoppover('#removing-channel-popover');
 });
 
 test('Attempt to add a new message by the user', async () => {
@@ -397,5 +402,13 @@ test('Check socket.IO real-time getting messages', async () => {
 
   mockServer.emit('removeChannel', { data: { type: 'channels', id: updatingChannel.id } });
   timeout(300);
+  expect(asFragment()).toMatchSnapshot();
+
+  mockServer.emit('connect');
+  await waitForElement(() => getByText('online'));
+  expect(asFragment()).toMatchSnapshot();
+
+  mockServer.emit('disconnect');
+  await waitForElement(() => getByText('offline'));
   expect(asFragment()).toMatchSnapshot();
 });

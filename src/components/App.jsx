@@ -1,27 +1,20 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
-import ChannelsPanel from './ChannelsPanel';
 import ChannelView from './ChannelView';
-import LanguagePanel from './LanguagePanel';
-
-const style = {
-  top: 0,
-  left: 0,
-  bottom: 0,
-  right: 0,
-};
+import ConnectionStatus from './ConnectionStatus';
+import Dashboard from './Dashboard';
 
 const App = () => (
-  <Row as="main" className="position-absolute" style={style}>
-    <Col as="aside" xs={4} className="d-flex flex-column">
-      <ChannelsPanel />
-      <LanguagePanel />
+  <main className="h-100 d-flex flex-column flex-md-row">
+    <Col as="aside" md={4} className="px-0 mr-md-3 mb-2 mb-md-0 d-flex flex-column">
+      <Dashboard />
     </Col>
-    <Col as="section" className="position-relative">
+    <Col xs={11} md={8} as="section" className="d-flex flex-column flex-grow-1 px-0 ml-md-3 mw-100">
+      <ConnectionStatus />
       <ChannelView />
     </Col>
-  </Row>
+  </main>
 );
 
 export default App;

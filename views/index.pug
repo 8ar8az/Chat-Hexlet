@@ -2,6 +2,7 @@ doctype html
 html.h-100(lang="en")
   head
     title= Title
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
     script.
       var gon = !{JSON.stringify(gon)};
   body.h-100.d-flex.flex-column
@@ -13,7 +14,7 @@ html.h-100(lang="en")
         ul.navbar-nav.mr-auto
           li.nav-item.active
             a.nav-link(href="/") Home
-    .container.position-relative.flex-grow-1
-      #chat.position-absolute(style={ top: 0, bottom: 0, left: 0, right: 0 })
+    .container.flex-grow-1
+      #chat.h-100
       // block content
     script(src='/assets/main.js')

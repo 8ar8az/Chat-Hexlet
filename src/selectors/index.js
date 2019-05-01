@@ -30,6 +30,8 @@ export const channelRemovingStateSelector = (
   props,
 ) => state.channelRemovingState[props.removingChannelId];
 
+export const connectionWithServerStateSelector = state => state.connectionWithServerState;
+
 export const channelsSelector = createSelector(
   [getChannelsById, getChannelsAllIds],
   (channelsById, channelsAllIds) => {
