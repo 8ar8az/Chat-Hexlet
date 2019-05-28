@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap';
 import { withTranslation } from 'react-i18next';
 import { SubmissionError } from 'redux-form';
 
-import ChannelEditForm from '../forms/ChannelEditForm';
+import ChannelEditForm from './ChannelEditForm';
 import connect from '../../../lib/connect';
 import { updatingChannelSelector, updatingChannelDialogDisplaySelector, channelUpdatingStateSelector } from '../../selectors';
 

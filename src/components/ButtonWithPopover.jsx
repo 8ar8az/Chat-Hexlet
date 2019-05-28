@@ -39,7 +39,15 @@ class ButtonWithPopover extends React.Component {
             placement,
             arrowProps,
           }) => (
-            <Popover title={<div className="text-center">{popoverTitle}</div>} id={popoverId} ref={ref} style={style} placement={placement} arrowProps={arrowProps} onClick={this.handleClick}>
+            <Popover
+              title={<div className="text-center">{popoverTitle}</div>}
+              id={popoverId}
+              ref={ref}
+              style={style}
+              placement={placement}
+              arrowProps={arrowProps}
+              onClick={this.handleClick}
+            >
               {children}
             </Popover>
           )}

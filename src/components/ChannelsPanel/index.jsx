@@ -7,13 +7,13 @@ import {
 } from 'react-bootstrap';
 import cn from 'classnames';
 
-import connect from '../../lib/connect';
-import { channelsSelector, currentChannelIdSelector } from '../selectors';
-import ScrollableContainer from './containers/ScrollableContainer';
-import ChannelAddingButton from './buttons/ChannelAddingButton';
-import ChannelRemovingButton from './buttons/ChannelRemovingButton';
-import ChannelUpdatingButton from './buttons/ChannelUpdatingButton';
-import ChannelUpdatingModal from './modals/ChannelUpdatingModal';
+import connect from '../../../lib/connect';
+import { channelsSelector, currentChannelIdSelector } from '../../selectors';
+import ScrollableContainer from '../ScrollableContainer';
+import ChannelAddingButton from './ChannelAddingButton';
+import ChannelRemovingButton from './ChannelRemovingButton';
+import ChannelUpdatingButton from './ChannelUpdatingButton';
+import ChannelUpdatingModal from './ChannelUpdatingModal';
 
 const style = {
   top: 0,

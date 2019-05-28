@@ -2704,11 +2704,6 @@ exports[`Attempt to change current channel 2`] = `
                 </div>
               </div>
             </div>
-            <div
-              class="new-message-form-error invalid-feedback d-block"
-            >
-              An error occurred while sending the data. Try again later.
-            </div>
           </form>
         </div>
       </div>
@@ -3923,11 +3918,6 @@ exports[`Check socket.IO real-time getting messages 1`] = `
                 </div>
               </div>
             </div>
-            <div
-              class="new-message-form-error invalid-feedback d-block"
-            >
-              An error occurred while sending the data. Try again later.
-            </div>
           </form>
         </div>
       </div>
@@ -4336,11 +4326,6 @@ exports[`Check socket.IO real-time getting messages 2`] = `
                   </button>
                 </div>
               </div>
-            </div>
-            <div
-              class="new-message-form-error invalid-feedback d-block"
-            >
-              An error occurred while sending the data. Try again later.
             </div>
           </form>
         </div>
@@ -4797,11 +4782,6 @@ exports[`Check socket.IO real-time getting messages 3`] = `
                 </div>
               </div>
             </div>
-            <div
-              class="new-message-form-error invalid-feedback d-block"
-            >
-              An error occurred while sending the data. Try again later.
-            </div>
           </form>
         </div>
       </div>
@@ -5257,11 +5237,6 @@ exports[`Check socket.IO real-time getting messages 4`] = `
                 </div>
               </div>
             </div>
-            <div
-              class="new-message-form-error invalid-feedback d-block"
-            >
-              An error occurred while sending the data. Try again later.
-            </div>
           </form>
         </div>
       </div>
@@ -5670,11 +5645,6 @@ exports[`Check socket.IO real-time getting messages 5`] = `
                   </button>
                 </div>
               </div>
-            </div>
-            <div
-              class="new-message-form-error invalid-feedback d-block"
-            >
-              An error occurred while sending the data. Try again later.
             </div>
           </form>
         </div>
@@ -6085,11 +6055,6 @@ exports[`Check socket.IO real-time getting messages 6`] = `
                 </div>
               </div>
             </div>
-            <div
-              class="new-message-form-error invalid-feedback d-block"
-            >
-              An error occurred while sending the data. Try again later.
-            </div>
           </form>
         </div>
       </div>
@@ -6499,11 +6464,6 @@ exports[`Check socket.IO real-time getting messages 7`] = `
                 </div>
               </div>
             </div>
-            <div
-              class="new-message-form-error invalid-feedback d-block"
-            >
-              An error occurred while sending the data. Try again later.
-            </div>
           </form>
         </div>
       </div>
@@ -6537,14 +6497,6 @@ exports[`Init state render 1`] = `
             offline
           </span>
         </h6>
-      </div>
-      <div
-        class="channel-view flex-grow-1 position-relative"
-      >
-        <div
-          class="d-flex flex-column position-absolute"
-          style="right: 0px; left: 0px; top: 0px; bottom: 0px;"
-        />
       </div>
     </section>
   </main>

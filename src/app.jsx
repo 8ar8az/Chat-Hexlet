@@ -10,7 +10,7 @@ import uuidv4 from 'uuid/v4';
 import io from 'socket.io-client';
 
 import App from './components/App';
-import LanguageLoadingModal from './components/modals/LoadingLanguageModal';
+import LanguageLoadingModal from './components/LanguagesPanel/LoadingLanguageModal';
 import reducers from './reducers';
 import CurrentUserContext from './context';
 import initializeSocketClient from './socket-client';

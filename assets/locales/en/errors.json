@@ -1,5 +1,6 @@
 {
   "dataSendingError": "An error occurred while sending the data. Try again later.",
   "channelNameNotUnique": "Such channel's name is already exist.",
-  "channelNameIsEmpty": "Channel's name can't be blank."
+  "channelNameIsEmpty": "Channel's name can't be blank.",
+  "emptyNewMessageText": "New message's text can't be blank."
 }

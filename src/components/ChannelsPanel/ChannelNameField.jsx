@@ -3,11 +3,26 @@ import { InputGroup } from 'react-bootstrap';
 import { withTranslation } from 'react-i18next';
 import cn from 'classnames';
 
-import DataSendingButton from '../buttons/DataSendingButton';
-import DialogError from './DialogError';
+import DataSendingButton from '../DataSendingButton';
+import DialogError from '../DialogError';
 
 @withTranslation()
 class ChannelNameField extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.inputRef = React.createRef();
+  }
+
+  componentDidMount() {
+    const timer = setInterval(() => {
+      if (this.inputRef.current) {
+        this.inputRef.current.focus();
+        clearInterval(timer);
+      }
+    });
+  }
+
   render() {
     const { input, meta, t } = this.props;
 
@@ -20,7 +35,14 @@ class ChannelNameField extends React.Component {
     return (
       <div className="channel-name-field">
         <InputGroup>
-          <input type="text" className={classes} placeholder={t('labels:inputs.channels.nameFieldPlaceholder')} disabled={meta.submitting} {...input} />
+          <input
+            ref={this.inputRef}
+            type="text"
+            className={classes}
+            placeholder={t('labels:inputs.channels.nameFieldPlaceholder')}
+            disabled={meta.submitting}
+            {...input}
+          />
           <InputGroup.Append>
             <DataSendingButton
               type="submit"

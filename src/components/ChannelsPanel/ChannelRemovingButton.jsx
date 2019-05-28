@@ -3,11 +3,11 @@ import { Button } from 'react-bootstrap';
 import { MdDelete, MdDone } from 'react-icons/md';
 import { withTranslation } from 'react-i18next';
 
-import ButtonWithPopover from './ButtonWithPopover';
+import ButtonWithPopover from '../ButtonWithPopover';
 import { removingChannelDialogDisplaySelector, channelRemovingStateSelector } from '../../selectors';
 import connect from '../../../lib/connect';
-import DialogError from '../forms/DialogError';
-import DataSendingButton from './DataSendingButton';
+import DialogError from '../DialogError';
+import DataSendingButton from '../DataSendingButton';
 
 const mapStateToProps = (state, props) => ({
   removingChannelDialogDisplay: removingChannelDialogDisplaySelector(state, props),

@@ -3,7 +3,7 @@ import { Navbar } from 'react-bootstrap';
 import { withTranslation } from 'react-i18next';
 
 import ChannelsPanel from './ChannelsPanel';
-import LanguagePanel from './LanguagePanel';
+import LanguagePanel from './LanguagesPanel';
 
 @withTranslation()
 class Dashboard extends React.Component {

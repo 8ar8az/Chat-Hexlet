@@ -4,9 +4,9 @@ import React from 'react';
 import { ListGroup } from 'react-bootstrap';
 import { withTranslation } from 'react-i18next';
 
-import connect from '../../lib/connect';
-import { messagesBoxBottomAlignStateSelector, messagesForCurrentChannelSelector } from '../selectors';
-import ScrollableContainer from './containers/ScrollableContainer';
+import connect from '../../../lib/connect';
+import { messagesBoxBottomAlignStateSelector, messagesForCurrentChannelSelector } from '../../selectors';
+import ScrollableContainer from '../ScrollableContainer';
 
 const style = {
   minHeight: '200px',

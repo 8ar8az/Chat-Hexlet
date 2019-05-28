@@ -32,6 +32,8 @@ export const channelRemovingStateSelector = (
 
 export const connectionWithServerStateSelector = state => state.connectionWithServerState;
 
+export const newMessageTextFieldStateSelector = state => state.newMessageTextFieldState;
+
 export const channelsSelector = createSelector(
   [getChannelsById, getChannelsAllIds],
   (channelsById, channelsAllIds) => {

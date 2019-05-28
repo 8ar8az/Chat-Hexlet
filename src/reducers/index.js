@@ -133,6 +133,14 @@ const messagesBoxBottomAlignState = handleActions({
   [actions.unsetMessageBoxAlignToBottom]: _.constant('off'),
 }, 'on');
 
+const newMessageTextFieldState = handleActions({
+  [actions.focusNewMessageTextField]: _.constant('focused'),
+  [combineActions(
+    actions.blurNewMessageTextField,
+    actions.changeCurrentChannel,
+  )]: _.constant('blurred'),
+}, 'blurred');
+
 const connectionWithServerState = handleActions({
   [actions.connectWithServer]: _.constant('online'),
   [actions.disconnectWithServer]: _.constant('offline'),
@@ -148,6 +156,7 @@ export default combineReducers({
   updatingChannelDialogState,
   removingChannelDialogState,
   messagesBoxBottomAlignState,
+  newMessageTextFieldState,
   connectionWithServerState,
   form: formReducer,
 });

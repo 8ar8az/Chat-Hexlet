@@ -8,7 +8,7 @@ import { withTranslation } from 'react-i18next';
 import connect from '../../../lib/connect';
 import { channelsSelector } from '../../selectors';
 import ChannelNameField from './ChannelNameField';
-import DialogError from './DialogError';
+import DialogError from '../DialogError';
 
 const mapStateToProps = state => ({
   channels: channelsSelector(state),
@@ -16,7 +16,7 @@ const mapStateToProps = state => ({
 
 @connect(mapStateToProps)
 @withTranslation()
-@reduxForm()
+@reduxForm({ touchOnChange: true, touchOnBlur: false })
 class ChannelEditForm extends React.Component {
   validateUniqueChannelName = (value) => {
     const { channels, t } = this.props;

@@ -1,9 +1,11 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
+import _ from 'lodash';
 
-import connect from '../../lib/connect';
+import connect from '../../../lib/connect';
 import MessagesBox from './MessagesBox';
-import NewMessageForm from './forms/NewMessageForm';
-import { currentChannelIdSelector } from '../selectors';
+import NewMessageForm from './NewMessageForm';
+import { currentChannelIdSelector } from '../../selectors';
 
 const mapStateToProps = state => ({
   currentChannelId: currentChannelIdSelector(state),
@@ -17,7 +19,17 @@ const style = {
 };
 
 @connect(mapStateToProps)
+@withTranslation()
 class ChannelView extends React.Component {
+  validateNewMessageForm = (values) => {
+    const { t } = this.props;
+
+    if (_.isEmpty(_.trim(values.text))) {
+      return { text: t('errors:emptyNewMessageText') };
+    }
+    return {};
+  }
+
   render() {
     const { currentChannelId } = this.props;
 
@@ -25,7 +37,7 @@ class ChannelView extends React.Component {
       <div className="channel-view flex-grow-1 position-relative">
         <div className="d-flex flex-column position-absolute" style={style}>
           <MessagesBox />
-          <NewMessageForm key={currentChannelId} form={`newMessageForChannel-${currentChannelId}`} />
+          <NewMessageForm key={currentChannelId} form={`newMessageForChannel-${currentChannelId}`} validate={this.validateNewMessageForm} />
         </div>
       </div>
     );

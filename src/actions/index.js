@@ -22,6 +22,9 @@ export const sendMessageSuccess = createAction('MESSAGE_SEND_SUCCESS');
 export const setMessageBoxAlignToBottom = createAction('MESSAGE_BOX_SET_ALIGN_TO_BOTTOM');
 export const unsetMessageBoxAlignToBottom = createAction('MESSAGE_BOX_UNSET_ALIGN_TO_BOTTOM');
 
+export const focusNewMessageTextField = createAction('NEW_MESSAGE_TEXT_FIELD_FOCUS');
+export const blurNewMessageTextField = createAction('NEW_MESSAGE_TEXT_FIELD_BLUR');
+
 export const showAddingChannelDialog = createAction('ADDING_CHANNEL_DIALOG_SHOW');
 export const hideAddingChannelDialog = createAction('ADDING_CHANNEL_DIALOG_HIDE');
 

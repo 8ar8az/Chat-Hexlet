@@ -6,8 +6,8 @@ import { SubmissionError } from 'redux-form';
 
 import connect from '../../../lib/connect';
 import { addingChannelDialogDisplaySelector, channelAddingStateSelector } from '../../selectors';
-import ChannelEditForm from '../forms/ChannelEditForm';
-import ButtonWithPopover from './ButtonWithPopover';
+import ChannelEditForm from './ChannelEditForm';
+import ButtonWithPopover from '../ButtonWithPopover';
 
 const mapStateToProps = state => ({
   addingChannelDialogDisplay: addingChannelDialogDisplaySelector(state),
